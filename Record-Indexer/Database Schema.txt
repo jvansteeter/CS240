@@ -1,0 +1,55 @@
+
+
+create table users
+(
+	id integer not null primary key autoincrement,
+	username varchar(255) not null,
+	password varchar(255) not null,
+	firstname varchar(255) not null,
+	lastname varchar(255) not null,
+	email varchar(255) not null,
+	indexedrecords int not null,
+	currentbatch int
+);
+
+
+create table projects
+(
+	id integer not null primary key autoincrement,
+	title varchar(255) not null,
+	recordsperimage int not null,
+	firstYcoord int not null,
+	recordheight int not null
+);
+
+
+create table fields
+(
+	id integer not null primary key autoincrement,
+	title varchar(255) not null,
+	xcoord int not null,
+	width int not null,
+	relative_position int not null,
+	helphtml varchar(255) not null,
+	knowndata varchar(255) not null,
+	project_id int not null
+);
+
+
+create table images
+(
+	id integer not null primary key autoincrement,
+	file varchar(255) not null,
+	project_id int not null,
+	checked_to_user int
+);
+
+
+create table value
+(
+	id integer not null primary key autoincrement,
+	value varchar(255) not null,
+	field varchar(255) not null,
+	row int not null,
+	image_id int
+);

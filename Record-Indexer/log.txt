@@ -1,0 +1,84 @@
+Apr 06, 2015 3:20:53 PM server.Server run
+INFO: Initializing Model
+Apr 06, 2015 3:20:54 PM server.Server run
+INFO: Initializing HTTP Server
+Apr 06, 2015 3:20:54 PM server.Server run
+INFO: Starting HTTP Server
+Apr 06, 2015 8:12:59 PM handlers.DownloadBatchHandler handle
+SEVERE: ResultSet closed
+server.ServerException: ResultSet closed
+	at server.ServerFacade.downloadBatch(ServerFacade.java:224)
+	at handlers.DownloadBatchHandler.handle(DownloadBatchHandler.java:32)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.AuthFilter.doFilter(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange.run(Unknown Source)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: server.DatabaseException: ResultSet closed
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:291)
+	at server.ServerFacade.downloadBatch(ServerFacade.java:198)
+	... 11 more
+Caused by: java.sql.SQLException: ResultSet closed
+	at org.sqlite.RS.checkOpen(RS.java:63)
+	at org.sqlite.RS.markCol(RS.java:77)
+	at org.sqlite.RS.getInt(RS.java:289)
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:284)
+	... 12 more
+
+Apr 06, 2015 8:13:00 PM handlers.DownloadBatchHandler handle
+SEVERE: ResultSet closed
+server.ServerException: ResultSet closed
+	at server.ServerFacade.downloadBatch(ServerFacade.java:224)
+	at handlers.DownloadBatchHandler.handle(DownloadBatchHandler.java:32)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.AuthFilter.doFilter(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange.run(Unknown Source)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: server.DatabaseException: ResultSet closed
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:291)
+	at server.ServerFacade.downloadBatch(ServerFacade.java:198)
+	... 11 more
+Caused by: java.sql.SQLException: ResultSet closed
+	at org.sqlite.RS.checkOpen(RS.java:63)
+	at org.sqlite.RS.markCol(RS.java:77)
+	at org.sqlite.RS.getInt(RS.java:289)
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:284)
+	... 12 more
+
+Apr 06, 2015 8:13:14 PM handlers.DownloadBatchHandler handle
+SEVERE: ResultSet closed
+server.ServerException: ResultSet closed
+	at server.ServerFacade.downloadBatch(ServerFacade.java:224)
+	at handlers.DownloadBatchHandler.handle(DownloadBatchHandler.java:32)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.AuthFilter.doFilter(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange.run(Unknown Source)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: server.DatabaseException: ResultSet closed
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:291)
+	at server.ServerFacade.downloadBatch(ServerFacade.java:198)
+	... 11 more
+Caused by: java.sql.SQLException: ResultSet closed
+	at org.sqlite.RS.checkOpen(RS.java:63)
+	at org.sqlite.RS.markCol(RS.java:77)
+	at org.sqlite.RS.getInt(RS.java:289)
+	at DAO.ImageDAO.downloadBatch(ImageDAO.java:284)
+	... 12 more
+

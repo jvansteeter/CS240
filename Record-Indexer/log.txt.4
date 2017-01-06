@@ -1,0 +1,35 @@
+Apr 08, 2015 11:25:48 AM server.Server run
+INFO: Initializing Model
+Apr 08, 2015 11:25:48 AM server.Server run
+INFO: Initializing HTTP Server
+Apr 08, 2015 11:25:48 AM server.Server run
+INFO: Starting HTTP Server
+Apr 08, 2015 6:17:37 PM handlers.SubmitBatchHandler handle
+SEVERE: Could not insert contact
+server.ServerException: Could not insert contact
+	at server.ServerFacade.submitBatch(ServerFacade.java:280)
+	at handlers.SubmitBatchHandler.handle(SubmitBatchHandler.java:31)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.AuthFilter.doFilter(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(Unknown Source)
+	at com.sun.net.httpserver.Filter$Chain.doFilter(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Exchange.run(Unknown Source)
+	at sun.net.httpserver.ServerImpl$DefaultExecutor.execute(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.handle(Unknown Source)
+	at sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: server.DatabaseException: Could not insert contact
+	at DAO.ValueDAO.add(ValueDAO.java:65)
+	at DAO.ValueDAO.submitBatch(ValueDAO.java:298)
+	at server.ServerFacade.submitBatch(ServerFacade.java:267)
+	... 11 more
+Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (value.value may not be NULL)
+	at org.sqlite.DB.newSQLException(DB.java:383)
+	at org.sqlite.DB.newSQLException(DB.java:387)
+	at org.sqlite.DB.execute(DB.java:342)
+	at org.sqlite.DB.executeUpdate(DB.java:363)
+	at org.sqlite.PrepStmt.executeUpdate(PrepStmt.java:85)
+	at DAO.ValueDAO.add(ValueDAO.java:50)
+	... 13 more
+
